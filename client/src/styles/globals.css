@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F8F4EF;
+    color: #4A3728;
+    font-family: "Jost", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Cormorant Garamond", serif;
+    color: #4A3728;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: "Cormorant Garamond", serif; }
+  .font-body    { font-family: "Jost", sans-serif; }
+  .font-script  { font-family: "Great Vibes", cursive; }
+
+  .vana-img { filter: sepia(8%) saturate(110%) brightness(98%); }
+
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .gold-frame { position: relative; }
+  .gold-frame::before {
+    content: "";
+    position: absolute;
+    inset: 16px -16px -16px 16px;
+    border: 1px solid #C9A96E;
+    border-radius: 1rem;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .gold-frame > * { position: relative; z-index: 1; }
+}
